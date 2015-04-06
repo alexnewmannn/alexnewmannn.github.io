@@ -11,7 +11,7 @@
 		vertical-align: top;
 		background: 0;
 		float: right;
-		width: 30%;
+		width: 40%;
 		padding: 0;
 		margin: 0;
 		border: 0;
@@ -19,7 +19,7 @@
 }
 
 .menu-list {
-	transition: transform 0.4s;
+	transition: transform 0.4s ease;
 	transform: translate3d(100%, 0, 0);
 	font-family: $heading-font;
 	line-height: 3.2rem;
@@ -40,7 +40,7 @@
 	}
 
 	.out & {
-		transition: transform 0.3s;
+		transition: transform 0.3s ease;
 		transform: translateX(-100%);
 	}
 }
@@ -60,9 +60,9 @@
 	overflow: hidden;
 
 	@include media('>tablet') {
-		background: -webkit-linear-gradient(top, $green 0%,$green 50%,$dark-grey 50%,$dark-grey 100%); /* Chrome10+,Safari5.1+ */
-		transition: 0.1s color linear;
-		-webkit-transition: 0.1s background-position linear;
+		background: -webkit-linear-gradient(top, $green 0%,$green 50%,$dark-grey 50%,$dark-grey 100%);
+		transition: 0.1s color ease;
+		-webkit-transition: 0.2s background-position ease-in-out;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-position: 0 -10px;

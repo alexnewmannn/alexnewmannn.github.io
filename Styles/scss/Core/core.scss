@@ -6,9 +6,10 @@ body {
 	font-family: $body-font;
 	background: $offwhite;
 	letter-spacing: 0.4px;
-	line-height: 2.1rem;
+	line-height: 2.9rem;
 	color: $dark-grey;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
+	-webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
@@ -17,7 +18,7 @@ body {
 	width: 100%;
 
 	@include media('>desktop') {
-		width: 1200px;
+		width: 1000px;
 	}
 }
 
@@ -26,6 +27,10 @@ body {
 
 	.wrapper {
 		padding: 0 15px;
+
+		@include media('>tablet') {
+			padding: 0;
+		}
 	}
 
 	a {
@@ -46,6 +51,11 @@ body {
 	.github {
 		color: $blue;
 		background-image: linear-gradient(to top, $offwhite, $offwhite 2px, $blue 1px, $blue 4px, $offwhite 2px);
+	}
+
+	.twitter {
+		color: #4099FF;
+		background-image: linear-gradient(to top, $offwhite, $offwhite 2px, #4099ff 1px, #4099ff 4px, $offwhite 2px);
 	}
 }
 
