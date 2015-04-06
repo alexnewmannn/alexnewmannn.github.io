@@ -1,0 +1,84 @@
+.main-nav {
+	border-top: 1px solid darken($light-grey, 5%);
+	background: darken($light-grey, 3%); // Personally think these should be in a max-width MQ...
+	width: calc(100% + 30px);
+	margin: 16px -15px 0;
+	padding: 10px 0 8px;
+	float: left;
+
+	@include media('>tablet') {
+		display: inline-block;
+		vertical-align: top;
+		background: 0;
+		float: right;
+		width: 30%;
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+}
+
+.menu-list {
+	transition: transform 0.4s;
+	transform: translate3d(100%, 0, 0);
+	font-family: $heading-font;
+	line-height: 3.2rem;
+	text-align: center;
+	font-size: 2rem;
+	display: flex;
+	padding: 0;
+	margin: 0;
+
+	@include media('>tablet') {
+		text-align: right;
+		transition: none;
+		transform: none;
+	}
+
+	.open & {
+		transform: translate3d(0, 0, 0);
+	}
+
+	.out & {
+		transition: transform 0.3s;
+		transform: translateX(-100%);
+	}
+}
+
+.nav-item {
+	display: inline-block;
+	list-style: none;
+	flex: 1 1 auto;
+}
+
+.nav-link {
+	text-shadow: none;
+	color: $dark-grey;
+	position: relative;
+	display: block;
+	background: 0;
+	overflow: hidden;
+
+	@include media('>tablet') {
+		background: -webkit-linear-gradient(top, $green 0%,$green 50%,$dark-grey 50%,$dark-grey 100%); /* Chrome10+,Safari5.1+ */
+		transition: 0.1s color linear;
+		-webkit-transition: 0.1s background-position linear;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-position: 0 -10px;
+		padding: 10px 0;
+		margin-top: -10px;
+	}
+
+	&:hover {
+		color: $green;
+
+		@include media('>tablet') {
+			background-position: 0 10px;
+		}
+	}
+
+	&.active {
+		color: $green;
+	}
+}

@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $body-font;
+	background: $offwhite;
+	letter-spacing: 0.4px;
+	line-height: 2.1rem;
+	color: $dark-grey;
+	font-size: 1.5rem;
+}
+
+.wrapper {
+	max-width: 100%;
+	margin: auto;
+	width: 100%;
+
+	@include media('>desktop') {
+		width: 1200px;
+	}
+}
+
+.site-body {
+	border-top: 1px solid darken($light-grey, 5%);
+
+	.wrapper {
+		padding: 0 15px;
+	}
+
+	a {
+		text-shadow: -1px -1px 0 $light-grey, 1px -1px 0 $light-grey, -1px 1px 0 $light-grey, 1px 1px 0 $light-grey;
+		background-image: linear-gradient(to top, $offwhite, $offwhite 2px, $green 1px, $green 4px, $offwhite 2px);
+	}
+
+	.bede {
+		color: $red;
+		background-image: linear-gradient(to top, $offwhite, $offwhite 2px, $red 1px, $red 4px, $offwhite 2px);
+	}
+
+	.dribbble {
+		color: $pink;
+		background-image: linear-gradient(to top, $offwhite, $offwhite 2px, $pink 1px, $pink 4px, $offwhite 2px);
+	}
+
+	.github {
+		color: $blue;
+		background-image: linear-gradient(to top, $offwhite, $offwhite 2px, $blue 1px, $blue 4px, $offwhite 2px);
+	}
+}
+
+.resolute {
+	background: #447e81;
+	height: 600px;
+
+	.title {
+		color: #fff;
+	}
+}
+
+.cf:before,
+.cf:after {
+    display: table;
+    content: " ";
+}
+
+.cf:after {
+    clear: both;
+}
+
+a {
+	text-decoration: none;
+	color: $green;
+}
+
