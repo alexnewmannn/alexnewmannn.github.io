@@ -1,15 +1,10 @@
-* {
-	box-sizing: border-box;
-}
-
 body {
 	font-family: $body-font;
 	background: $offwhite;
 	letter-spacing: 0.4px;
-	line-height: 2.9rem;
+	line-height: round(1.8rem * 1.61803398875);
 	color: $dark-grey;
 	font-size: 1.8rem;
-	-webkit-font-smoothing: antialiased;
 }
 
 .wrapper {
@@ -28,7 +23,7 @@ body {
 	.wrapper {
 		padding: 0 15px;
 
-		@include media('>tablet') {
+		@include media('>desktop') {
 			padding: 0;
 		}
 	}
@@ -82,4 +77,3 @@ a {
 	text-decoration: none;
 	color: $green;
 }
-

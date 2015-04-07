@@ -1,0 +1,28 @@
+@mixin backgroundFill($color1, $color2, $offset, $direction) {
+	@if $direction == down {
+		$topColor: $color2;
+		$bottomColor: $color1;
+		$backgroundPos: (-$offset);
+		$backgroundPosHover: $offset;
+	}
+
+	@else if $direction == up {
+		$topColor: $color1;
+		$bottomColor: $color2;
+		$backgroundPos: $offset;
+		$backgroundPosHover: (-$offset);
+	}
+
+	background: -webkit-linear-gradient(top, $topColor 0%,$topColor 50%,$bottomColor 50%,$bottomColor 100%);
+	transition: 0.1s color ease;
+	-webkit-transition: 0.2s background-position ease-in-out;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-position: 0 $backgroundPos;
+	padding: $offset 0;
+	margin-top: -$offset;
+
+	&:hover {
+		background-position: 0 $backgroundPosHover;
+	}
+}

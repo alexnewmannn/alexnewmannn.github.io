@@ -3,7 +3,7 @@
 	background: darken($light-grey, 3%); // Personally think these should be in a max-width MQ...
 	width: calc(100% + 30px);
 	margin: 16px -15px 0;
-	padding: 10px 0 8px;
+	padding: 8px 0;
 	float: left;
 
 	@include media('>tablet') {
@@ -22,7 +22,7 @@
 	transition: transform 0.4s ease;
 	transform: translate3d(100%, 0, 0);
 	font-family: $heading-font;
-	line-height: 3.2rem;
+	line-height: round(2rem * 1.61803398875);
 	text-align: center;
 	font-size: 2rem;
 	display: flex;
@@ -60,22 +60,11 @@
 	overflow: hidden;
 
 	@include media('>tablet') {
-		background: -webkit-linear-gradient(top, $green 0%,$green 50%,$dark-grey 50%,$dark-grey 100%);
-		transition: 0.1s color ease;
-		-webkit-transition: 0.2s background-position ease-in-out;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-position: 0 -10px;
-		padding: 10px 0;
-		margin-top: -10px;
+		@include backgroundFill($dark-grey, $green, 10px, up);
 	}
 
 	&:hover {
 		color: $green;
-
-		@include media('>tablet') {
-			background-position: 0 10px;
-		}
 	}
 
 	&.active {
