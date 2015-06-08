@@ -60,7 +60,7 @@
 	overflow: hidden;
 
 	@include media('>tablet') {
-		@include backgroundFill($dark-grey, $green, 10px, up);
+		@include backgroundFill($dark-grey, $green, 10px, down);
 	}
 
 	&:hover {
