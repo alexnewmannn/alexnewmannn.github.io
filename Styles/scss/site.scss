@@ -3,3 +3,39 @@
 @import 'Type/type';
 @import 'Header/style';
 
+.about {
+	background: #d0e1ee;
+	color: #7f97a2;
+	font-family: $tisa-sans;
+	font-weight: bold;
+	font-size: 2rem;
+
+	strong {
+		color: darken(#7f97a2, 10%);
+	}
+
+	p:first-child {
+		margin-top: 0;
+	}
+}
+
+
+.footer {
+	background: #72838b;
+}
+
+footer {
+	a {
+		display: inline-block;
+		width: 90px;
+		color: darken(#72838b, 15%);
+
+		i {
+			display: none;
+
+			@include media('>tablet') {
+				display: block;
+			}
+		}
+	}
+}
